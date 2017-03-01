@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opcEspecies">
+        <item>Canino</item>
+        <item>Felino</item>
+    </string-array>
+
+    <string-array name="opcRazasPerro">
+        <item>Labrador</item>
+        <item>Labrador amarillo</item>
+        <item>Labrador verde</item>
+        <item>Criollo</item>
+        <item>Afgano</item>
+    </string-array>
+
+    <string-array name="opcRazasGato">
+        <item>Gato Criollo</item>
+        <item>Gato otra race</item>
+        <item>Portugues</item>
+        <item>Paraguayo</item>
+    </string-array>
+
+    <string-array name="opcTipoDieta">
+        <item>Concentrado</item>
+        <item>BARF</item>
+        <item>Cuido</item>
+        <item>Otra</item>
+    </string-array>
+
+    <string-array name="opcMarcaComida">
+        <item>Purina</item>
+        <item>Nutrecan</item>
+        <item>CIPA</item>
+        <item>Otra</item>
+    </string-array>
+
+    <string-array name="opcSexo">
+        <item>Hembra</item>
+        <item>Macho</item>
+    </string-array>
+
+    <string-array name="opcPelaje">
+        <item>Largo</item>
+        <item>Corto</item>
+    </string-array>
+
+    <string-array name="opcSiNo">
+        <item>No</item>
+        <item>Si</item>
+    </string-array>
+
+    <string-array name="opcVacunasPerro">
+        <item>Ninguna</item>
+        <item>Parvovirus</item>
+        <item>Quintuple</item>
+        <item>2nd quintuple</item>
+        <item>Sextuple</item>
+    </string-array>
+
+    <string-array name="opcVacunasGato">
+        <item>Ninguna</item>
+        <item>Triple</item>
+        <item>2nd Triple</item>
+        <item>Triple y Rabia</item>
+    </string-array>
+
+    <string-array name="opcDondeBanio">
+        <item>Veterinaria</item>
+        <item>Casa</item>
+    </string-array>
+
+    <string-array name="opcCiudad">
+        <item>Medellín</item>
+        <item>Bogota</item>
+        <item>Barranquilla</item>
+        <item>Bucaramanga</item>
+        <item>Cali</item>
+        <item>Cartagena</item>
+        <item>Pereira</item>
+    </string-array>
+
+    <string-array name="opcPais">
+        <item>Colombia</item>
+        <item>Bolivia</item>
+        <item>Argentina</item>
+        <item>Brasil</item>
+        <item>Chile</item>
+        <item>Ecuador</item>
+        <item>Estados Unidos</item>
+        <item>Mexico</item>
+        <item>Peru</item>
+        <item>Paraguay</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
+
+    <string-array name="opcApointmentType">
+        <item>Baño</item>
+        <item>Compra comida</item>
+        <item>Cumpleaños</item>
+        <item>Desparacitada</item>
+        <item>Otro tipo de evento</item>
+        <item>Salida de paseo</item>
+        <item>Vacuna</item>
+        <item>Visita al veterinario</item>
+    </string-array>
+
+
+</resources>

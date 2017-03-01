@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:flexible="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mocatto.fragments.CalendarFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layoutCal"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Agosto"
+                style="@style/textview_style"
+                android:id="@+id/mes"
+                android:textAlignment="center" />
+
+            <com.p_v.flexiblecalendar.FlexibleCalendarView
+                android:id="@+id/newCalendar"
+                flexible:disableAutoDateSelection="true"
+                android:layout_height="350dp"
+                android:layout_width="match_parent"
+                android:gravity="top" />
+
+            <EditText
+                android:layout_width="222dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtFechaSeleccionada"
+                android:editable="false"
+                android:inputType="none"
+                style="@style/edittext_style"
+                android:gravity="center_horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/layoutEditText"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayoutEvents"
+                    android:orientation="vertical"
+                    android:background="@color/colorLittleGray">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lista"
+        android:layout_below="@+id/layoutCal"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabAgregarNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/plus_icon"
+        app:backgroundTint="@color/colorOrangeMocatto"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_above="@+id/lista"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

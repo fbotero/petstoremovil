@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.mocatto.fragments.MenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="463dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ibRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="top|center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/menu_mimascota" />
+
+                    <ImageButton
+                        android:id="@+id/ibCalendario"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/ibComunidad"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="top|center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/menu_calendario" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/lbMisMascotas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/ibRegistro"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignRight="@+id/ibRegistro"
+                        android:layout_below="@+id/ibRegistro"
+                        android:layout_column="0"
+                        android:layout_gravity="bottom"
+                        android:layout_toStartOf="@+id/ibCalendario"
+                        android:text="@string/my_pet"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/abc_secondary_text_material_light"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/lbBuscar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/lbMisMascotas"
+                        android:layout_alignLeft="@+id/ibCalendario"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignStart="@+id/ibCalendario"
+                        android:layout_toEndOf="@+id/lbMisMascotas"
+                        android:text="@string/calendar"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/abc_secondary_text_material_light"
+                        android:textSize="22dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ibComunidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ibRegistro"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/menu_comunidad" />
+
+                    <ImageButton
+                        android:id="@+id/ibBuscar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignEnd="@+id/ibCalendario"
+                        android:layout_alignLeft="@+id/lbMenuCalendar"
+                        android:layout_alignRight="@+id/ibCalendario"
+                        android:layout_alignStart="@+id/lbMenuCalendar"
+                        android:layout_alignTop="@+id/ibComunidad"
+                        android:layout_gravity="top|center"
+                        android:layout_marginTop="40dp"
+                        android:layout_toEndOf="@+id/ibRegistro"
+                        android:background="@drawable/menu_mapa" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/lbMenuComunidad"
+                        android:layout_alignEnd="@+id/ibComunidad"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignRight="@+id/ibComunidad"
+                        android:layout_below="@+id/ibComunidad"
+                        android:layout_column="0"
+                        android:layout_toStartOf="@+id/ibBuscar"
+                        android:text="@string/community_menu"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/abc_secondary_text_material_light"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/lbMenuCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Search"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/abc_secondary_text_material_light"
+                        android:textSize="22sp" />
+                </TableRow>
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:baselineAligned="true"
+        android:gravity="bottom|center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="0dp">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+

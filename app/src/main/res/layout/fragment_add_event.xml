@@ -1,0 +1,252 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mocatto.fragments.AddEventFragment">
+
+    <ScrollView
+        android:id="@+id/scrollViewCrearEvento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_above="@+id/adView">
+
+        <LinearLayout
+            android:id="@+id/layoutGlobalCalendario"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layoutCalendario"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/event_type"
+                    android:id="@+id/lblTipo"
+                    style="@style/textview_style"/>
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spTipoEvento"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/txtNamePet"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/name_pet"
+                    android:id="@+id/lbNombreMascota"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNamePet"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/txtNombreEvento"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/nombre_del_evento"
+                    android:id="@+id/lbNombreEvento"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNombreEvento"
+                    android:editable="false"
+                    android:inputType="text"
+                    android:typeface="sans"
+                    style="@style/edittext_style"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:nextFocusRight="@+id/txtFechaEvento"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/fecha_evento"
+                    android:id="@+id/lbFecha"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtFechaEvento"
+                    android:focusable="false"
+                    android:editable="false"
+                    style="@style/edit_text_calendar_menu_style"
+                    android:nextFocusRight="@+id/txtHora"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/hora"
+                    android:id="@+id/lbHora"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtHora"
+                    android:typeface="sans"
+                    android:editable="false"
+                    android:focusable="false"
+                    style="@style/edittext_style"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:nextFocusRight="@+id/txtUbicacion"/>
+
+                <picker.ugurtekbas.com.Picker.Picker
+                    android:id="@+id/picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:canvasColor="#ffffff"
+                    app:textColor="#000000"
+                    />
+
+                <Button
+                    android:id="@+id/btnSeleccionHora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:text="Seleccionar Hora"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/ubicacion"
+                    android:id="@+id/ibUbicacion"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtUbicacion"
+                    android:inputType="text"
+                    android:typeface="sans"
+                    style="@style/edittext_style"
+                    android:textSize="18sp"
+                    android:nextFocusRight="@+id/txtRecordar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/recordar_minutos_antes"
+                    android:id="@+id/lbRecordar"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtRecordar"
+                    android:inputType="number"
+                    android:typeface="sans"
+                    style="@style/edittext_style"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="263dp"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/btn_guardar_medium"
+                    android:id="@+id/ivBotonGuardar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_espacio_next1"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next11"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next1111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next11111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <!--com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_home_footer"
+        android:layout_alignParentStart="true"
+        android:foregroundGravity="bottom"
+        android:paddingBottom="0dp"
+        android:layout_alignParentBottom="true">
+    </com.google.android.gms.ads.AdView-->
+
+
+
+        <com.google.android.gms.ads.AdView
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_menu"
+            android:title="@string/menu" />
+        <item
+            android:id="@+id/menu_valores_mocatto"
+            android:title="@string/valores_mocatto" />
+        <item
+            android:id="@+id/menu_politicas"
+            android:title="@string/condiciones_y_pol_ticas" />
+        <item
+            android:id="@+id/menu_informacion"
+            android:title="@string/informaci_n_de_la_aplicaci_n" />
+        <item
+            android:id="@+id/menu_cerrar_sesion"
+            android:title="@string/cerrar_sesi_n" />
+    </group>
+
+</menu>

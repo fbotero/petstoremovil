@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_add_pet"
+        app:showAsAction="never"
+        android:orderInCategory="0"
+        android:title="@string/agregar_mascota" />
+
+    <item
+        android:id="@+id/menu_image_campanita"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_campanita_opt2"
+        android:title=""/>
+
+</menu>

@@ -1,0 +1,263 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mocatto.fragments.PetProfileFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:id="@+id/relativeLayoutMain">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="466dp"
+        android:background="@color/colorWhite"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:layout_width="241dp"
+                android:layout_height="145dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_selec_foto"
+                android:id="@+id/ivImagen"
+                android:layout_margin="5dp" />
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!--Desde acá los campos del formulario-->
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/nombre"
+                    style="@style/textview_style"
+                    android:id="@+id/nombre"
+                    android:textAlignment="gravity"
+                    />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNombre"
+                    style="@style/edittext_style"
+                    android:inputType="text"
+                    android:focusable="true"
+                    android:layout_weight="1"
+                    android:nextFocusRight="@+id/spEspecie"
+                    android:nextFocusForward="@+id/spEspecie"
+                    android:nextFocusDown="@+id/spEspecie"
+                    android:nextFocusUp="@+id/spEspecie"
+                    android:nextFocusLeft="@+id/spEspecie"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/especie"
+                    android:focusable="false"
+                    android:id="@+id/lblEspecie"
+                    style="@style/textview_style" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spEspecie"
+                    android:focusable="true"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/spRaza"
+                    android:nextFocusForward="@+id/spRaza"
+                    android:nextFocusDown="@+id/spRaza"
+                    android:nextFocusLeft="@id/spRaza"
+                    android:nextFocusUp="@id/spRaza"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/textview_style"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/race"
+                    android:id="@+id/lblRaza"
+                    android:focusable="false"/>
+
+                <AutoCompleteTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spRaza"
+                    android:focusable="true"
+                    android:inputType="text"
+                    style="@style/edittext_style"
+                    android:nextFocusRight="@+id/spSexo"
+                    android:nextFocusForward="@+id/spSexo"
+                    android:nextFocusDown="@+id/spSexo"
+                    android:nextFocusUp="@id/spSexo"
+                    android:nextFocusLeft="@id/spSexo"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/gender"
+                    android:id="@+id/lblSexo"
+                    android:focusable="false"
+                    style="@style/textview_style"/>
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spSexo"
+                    android:focusable="true"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/txtFechaNacimiento"
+                    android:nextFocusForward="@+id/txtFechaNacimiento"
+                    android:nextFocusDown="@+id/txtFechaNacimiento"
+                    android:nextFocusLeft="@id/txtFechaNacimiento"
+                    android:nextFocusUp="@id/txtFechaNacimiento"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/fecha_nacimiento"
+                    android:id="@+id/lbFechaNacimiento"
+                    android:textAlignment="gravity"
+                    android:focusable="false"
+                    style="@style/textview_style"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtFechaNacimiento"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    style="@style/edit_text_calendar_menu_style"
+                    android:nextFocusRight="@+id/spPelaje"
+                    android:nextFocusForward="@+id/spPelaje"
+                    android:nextFocusDown="@+id/spPelaje"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/fur"
+                    android:focusable="false"
+                    android:id="@+id/lblPelaje"
+                    style="@style/textview_style"/>
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spPelaje"
+                    android:focusable="true"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/ic_next"
+                    android:nextFocusForward="@+id/ic_next"
+                    android:nextFocusDown="@+id/ic_next"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_espacio_horiz1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="end"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nextRegister1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/siguiente"
+                        style="@style/textview_style_next" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_espacio_horiz2"
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next"
+                        android:id="@+id/ivNext1"
+                        android:layout_toRightOf="@id/nextRegister1"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_espacio_next1"
+                    android:layout_width="match_parent"
+                    android:layout_height="10sp"
+                    android:orientation="vertical"
+                    />
+                <LinearLayout
+                    android:id="@+id/layout_espacio_next11"
+                    android:layout_width="match_parent"
+                    android:layout_height="10sp"
+                    android:orientation="vertical"
+                    />
+                <LinearLayout
+                    android:id="@+id/layout_espacio_next111"
+                    android:layout_width="match_parent"
+                    android:layout_height="10sp"
+                    android:orientation="vertical"
+                    />
+                <LinearLayout
+                    android:id="@+id/layout_espacio_next1111"
+                    android:layout_width="match_parent"
+                    android:layout_height="10sp"
+                    android:orientation="vertical"
+                    />
+                <LinearLayout
+                    android:id="@+id/layout_espacio_next11111"
+                    android:layout_width="match_parent"
+                    android:layout_height="10sp"
+                    android:orientation="vertical"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:baselineAligned="true"
+        android:gravity="bottom|center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:id="@+id/linearLayout">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer"/>
+    </LinearLayout>
+
+</RelativeLayout>

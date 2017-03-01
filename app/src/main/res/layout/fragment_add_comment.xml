@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mocatto.fragments.AddCommentFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutAddTopic"
+            android:background="@color/colorGrayCommunity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="367dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/name"
+                android:id="@+id/lbDescription"
+                style="@style/textview_style_comment" />
+
+            <TextView
+                style="@style/textview_style_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Ver Descripción"
+                android:id="@+id/tvVerDescripcion"
+                android:layout_gravity="right"
+                android:textColor="@color/com_facebook_blue" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txtDescription"
+                android:editable="false"
+                android:inputType="text"
+                android:lines="5"
+                style="@style/edittext_style_comment"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGrayCommunity"/>
+
+            <RelativeLayout
+                android:id="@+id/layoutButtonsTopic"
+                android:background="@color/colorGrayCommunity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveComment"
+                    android:background="@drawable/btn_rojoenblanco"
+                    android:foregroundGravity="center_vertical|center_horizontal"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/enviar"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:typeface="sans"
+                    android:textColor="@android:color/white"
+                    android:layout_alignBottom="@+id/saveComment"
+                    android:layout_alignStart="@+id/saveComment"
+                    android:layout_alignTop="@+id/saveComment"
+                    android:layout_alignEnd="@+id/saveComment"
+                    android:id="@+id/tvComentar"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <ListView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/commentList"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabVolverAmenuComunidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@android:drawable/ic_media_rew"
+        app:backgroundTint="@color/colorOrangeMocatto"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="10dp" />
+
+
+        <com.google.android.gms.ads.AdView
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer"/>
+
+
+</RelativeLayout>

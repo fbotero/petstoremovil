@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/layoutAddTopic"
+        android:background="@color/colorGrayCommunity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text1"
+        android:lines="2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/category"
+        android:textAppearance="@android:style/TextAppearance.Holo.Large"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text2"
+        android:layout_below="@+id/text1"
+        android:layout_toRightOf="@+id/category"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+    <RelativeLayout
+        android:id="@+id/layoutButtonsTopic"
+        android:background="@color/colorGrayCommunity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment"
+            android:background="@drawable/btn_rojoenblanco"
+            android:foregroundGravity="center_vertical|center_horizontal"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/comentar"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:typeface="sans"
+            android:textColor="@android:color/white"
+            android:layout_alignBottom="@+id/comment"
+            android:layout_alignStart="@+id/comment"
+            android:layout_alignTop="@+id/comment"
+            android:layout_alignEnd="@+id/comment"
+            android:id="@+id/tvComentar"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

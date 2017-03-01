@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mocatto.fragments.AlarmViewFragment">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_vacuna"
+        android:id="@+id/imagen"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/nombreEvento"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:text="Mocatto Pets un evento programado por ti"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignWithParentIfMissing="false"
+        android:typeface="sans"
+        android:textAlignment="center"
+        android:gravity="center|center_horizontal"
+        android:lines="4"
+        android:layout_below="@+id/imagen"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_yalohice"
+        android:background="@drawable/btn_rojoenblanco"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/nombreEvento"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/tittlebutton_no_recordar_mas"
+        android:id="@+id/tvYaLoHice"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:typeface="sans"
+        android:layout_alignBottom="@+id/btn_yalohice"
+        android:layout_alignStart="@+id/btn_yalohice"
+        android:layout_alignTop="@+id/btn_yalohice"
+        android:layout_alignEnd="@+id/btn_yalohice" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_recordardespues"
+        android:background="@drawable/btn_rojoenblanco"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_yalohice"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/recordar_despues"
+        android:id="@+id/tvRecordarDespues"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:typeface="sans"
+        android:layout_alignStart="@+id/btn_recordardespues"
+        android:layout_alignTop="@+id/btn_recordardespues"
+        android:layout_alignEnd="@+id/btn_recordardespues"
+        android:layout_alignBottom="@+id/btn_recordardespues"
+        android:layout_above="@+id/btn_recordardespues" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_norecordarmas"
+        android:background="@drawable/btn_rojoenblanco"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_recordardespues"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/no_recordar_mas"
+        android:id="@+id/tvNoRecordarMas"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:typeface="sans"
+        android:layout_alignBottom="@+id/btn_norecordarmas"
+        android:layout_alignTop="@+id/btn_norecordarmas"
+        android:layout_alignStart="@+id/btn_norecordarmas"
+        android:layout_alignEnd="@+id/btn_norecordarmas" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/tipoEvento"
+        android:text="@string/patrocina"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:typeface="sans"
+        android:textAlignment="center"
+        android:gravity="center|center_horizontal"
+        android:layout_above="@+id/imPublicidad"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/imPublicidad"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>

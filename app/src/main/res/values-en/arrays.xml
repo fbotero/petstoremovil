@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opcEspecies">
+        <item>Cat</item>
+        <item>Dog</item>
+    </string-array>
+
+    <string-array name="opcRazasPerro">
+        <item>Labrador</item>
+        <item>Labrador amarillo</item>
+        <item>Labrador verde</item>
+        <item>Pitbull</item>
+        <item>Afghan Hound</item>
+    </string-array>
+
+    <string-array name="opcRazasGato">
+        <item>Cat 1</item>
+        <item>Cat 2</item>
+    </string-array>
+
+    <string-array name="opcTipoDieta">
+        <item>Concentrado</item>
+        <item>BARF</item>
+        <item>Cuido</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="opcMarcaComida">
+        <item>Purina</item>
+        <item>Nutrecan</item>
+        <item>CIPA</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="opcSexo">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string-array name="opcPelaje">
+        <item>Long</item>
+        <item>Short</item>
+    </string-array>
+
+    <string-array name="opcSiNo">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="opcVacunasPerro">
+        <item>Neither</item>
+        <item>Parvovirus</item>
+        <item>Quintuple</item>
+        <item>2nd quintuple</item>
+        <item>Sextuple</item>
+    </string-array>
+
+    <string-array name="opcVacunasGato">
+        <item>Neither</item>
+        <item>Triple</item>
+        <item>2nd Triple</item>
+        <item>Triple and Rabies</item>
+    </string-array>
+
+    <string-array name="opcDondeBanio">
+        <item>Veterinary clinic</item>
+        <item>Home</item>
+    </string-array>
+
+    <string-array name="opcCiudad">
+        <item>Medellín</item>
+        <item>Bogota</item>
+        <item>Barranquilla</item>
+        <item>Bucaramanga</item>
+        <item>Cali</item>
+        <item>Cartagena</item>
+        <item>Pereira</item>
+    </string-array>
+
+    <string-array name="opcPais">
+        <item></item>
+        <item>Colombia</item>
+        <item>Bolivia</item>
+        <item>Argentina</item>
+        <item>Brasil</item>
+        <item>Chile</item>
+        <item>Ecuador</item>
+        <item>Estados Unidos</item>
+        <item>Mexico</item>
+        <item>Peru</item>
+        <item>Paraguay</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </string-array>
+
+    <string-array name="opcApointmentType">
+        <item>Shower</item>
+        <item>Buy food</item>
+        <item>Birthday</item>
+        <item>Deworming</item>
+        <item>Other kind of event</item>
+        <item>Walkout</item>
+        <item>Vaccine</item>
+        <item>Visit to veterinarian</item>
+    </string-array>
+</resources>

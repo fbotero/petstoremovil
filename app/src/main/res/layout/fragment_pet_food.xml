@@ -1,0 +1,287 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mocatto.fragments.PetFoodFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="466dp"
+        android:background="@color/colorWhite"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:layout_width="241dp"
+                android:layout_height="137dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_selec_foto"
+                android:id="@+id/ivImagen"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/diet"
+                android:id="@+id/lbTipodieta"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@style/textview_style"/>
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spTipoDieta"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@style/spinner_style" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/cual"
+                android:id="@+id/lbCualDieta"
+                android:textAlignment="gravity"
+                style="@style/textview_style"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCualDieta"
+
+                android:layout_alignParentLeft="true"
+                style="@style/edittext_style" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/foodGrams"
+                android:id="@+id/lbGramos"
+                android:textAlignment="gravity"
+                style="@style/textview_style"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtGramos"
+                style="@style/edittext_style"
+                android:layout_alignParentLeft="true"
+                android:inputType="number|numberDecimal" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/foodBrand"
+                android:id="@+id/lbMarcaComida"
+                style="@style/textview_style"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <!--Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spMarcaComida"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@style/spinner_style"
+                /-->
+
+            <AutoCompleteTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spMarcaComida"
+                android:editable="false"
+
+                android:inputType="text"
+                style="@style/edittext_style" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/cual"
+                android:id="@+id/lbCualMarca"
+                android:textAlignment="gravity"
+                style="@style/textview_style"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCualMarca"
+
+                style="@style/edittext_style"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/foodBuyRegularity"
+                android:id="@+id/lbKgs"
+                android:textAlignment="gravity"
+                style="@style/textview_style" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDuracionDias"
+                android:typeface="monospace"
+                style="@style/edittext_style"
+                android:inputType="number|numberDecimal"
+                android:textSize="18sp" />
+
+            <com.imanoweb.calendarview.CustomCalendarView
+                android:id="@+id/calendar_view_ult_compra_comida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:calendarBackgroundColor="@color/white"
+                app:calendarTitleTextColor="@color/black"
+                app:currentDayOfMonthColor="@color/current_day_of_month"
+                app:dayOfMonthTextColor="@color/black"
+                app:dayOfWeekTextColor="@color/black"
+                app:disabledDayBackgroundColor="@color/day_disabled_background_color"
+                app:disabledDayTextColor="@color/day_disabled_text_color"
+                app:selectedDayBackgroundColor="@color/day_disabled_text_color"
+                app:titleLayoutBackgroundColor="@color/white"
+                app:weekLayoutBackgroundColor="@color/white"
+                android:visibility="gone"
+                android:layout_gravity="top|center">
+            </com.imanoweb.calendarview.CustomCalendarView>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/lastFoodBuyDate"
+                android:id="@+id/lbFechaUltCompraComida"
+                android:textAlignment="gravity"
+                style="@style/textview_style"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtFechaUltCompraComida"
+                android:editable="false"
+                android:inputType="none"
+                android:focusable="false"
+                style="@style/edit_text_calendar_menu_style"
+                android:layout_alignParentLeft="true"/>
+
+            <LinearLayout
+                android:id="@+id/layout_espacio_horiz"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="end"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nextRegister2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/siguiente"
+                    style="@style/textview_style_next" />
+
+                <LinearLayout
+                    android:id="@+id/layout_espacio_horiz1"
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    android:id="@+id/ivNext1"
+                    android:layout_toRightOf="@id/nextRegister2"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_espacio_next1"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next11"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next1111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next11111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:baselineAligned="true"
+        android:gravity="bottom|center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:id="@+id/linearLayout">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer"/>
+    </LinearLayout>
+
+</RelativeLayout>

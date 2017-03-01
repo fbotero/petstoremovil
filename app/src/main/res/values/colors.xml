@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#323233</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorOrange">#f77614</color>
+    <color name="colorOrangeMocatto">#FF330D</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorLittleGray">#dddedc</color>
+    <color name="colorPurppleFace">#2B9ECF</color>
+    <color name="colorGrayCommunity">#F9F9F9</color>
+    <color name="colorGrayCalendar">#edeaea</color>
+</resources>

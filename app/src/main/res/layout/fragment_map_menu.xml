@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapMenuFragment"
+    android:gravity="center_vertical|center_horizontal">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:baselineAligned="true"
+                    android:orientation="vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_above="@+id/adView"
+                    android:gravity="center_vertical|center_horizontal">
+
+                <ImageButton
+                    android:layout_width="290dp"
+                    android:layout_height="37dp"
+                    android:id="@+id/store"
+                    android:background="@drawable/btn_gris"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/tienda"
+                    android:id="@+id/tvStore"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:layout_alignBottom="@+id/store"
+                    android:layout_alignTop="@+id/store"
+                    android:layout_alignStart="@+id/store"
+                    android:layout_alignEnd="@+id/store"
+                    android:layout_centerInParent="true" />
+
+                <ImageButton
+                    android:layout_width="290dp"
+                    android:layout_height="37dp"
+                    android:id="@+id/vet"
+                    android:background="@drawable/btn_gris"
+                    android:layout_below="@+id/store"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/veterinaria"
+                    android:id="@+id/tvVet"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:layout_alignBottom="@+id/vet"
+                    android:layout_alignTop="@+id/vet"
+                    android:layout_alignStart="@+id/vet"
+                    android:layout_alignEnd="@+id/vet"
+                    android:layout_centerInParent="true" />
+
+                <ImageButton
+                    android:layout_width="290dp"
+                    android:layout_height="37dp"
+                    android:id="@+id/hotel"
+                    android:background="@drawable/btn_gris"
+                    android:layout_below="@+id/vet"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/hotel"
+                    android:id="@+id/tvHotel"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:layout_alignBottom="@+id/hotel"
+                    android:layout_alignTop="@+id/hotel"
+                    android:layout_alignStart="@+id/hotel"
+                    android:layout_alignEnd="@+id/hotel"
+                    android:layout_centerInParent="true" />
+
+                <ImageButton
+                    android:layout_width="290dp"
+                    android:layout_height="37dp"
+                    android:id="@+id/spa"
+                    android:background="@drawable/btn_gris"
+                    android:layout_below="@+id/hotel"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/spa"
+                    android:id="@+id/tvSpa"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:layout_alignBottom="@+id/spa"
+                    android:layout_alignTop="@+id/spa"
+                    android:layout_alignStart="@+id/spa"
+                    android:layout_alignEnd="@+id/spa"
+                    android:layout_centerInParent="true" />
+
+                <ImageButton
+                    android:layout_width="290dp"
+                    android:layout_height="37dp"
+                    android:id="@+id/petFriendly"
+                    android:background="@drawable/btn_gris"
+                    android:layout_below="@+id/spa"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/pet_friendly"
+                    android:id="@+id/tvPetFriendly"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:layout_alignBottom="@+id/petFriendly"
+                    android:layout_alignTop="@+id/petFriendly"
+                    android:layout_alignStart="@+id/petFriendly"
+                    android:layout_alignEnd="@+id/petFriendly"
+                    android:layout_centerInParent="true" />
+
+                <ImageButton
+                    android:layout_width="290dp"
+                    android:layout_height="37dp"
+                    android:id="@+id/emergency"
+                    android:background="@drawable/btn_rojoenblanco"
+                    android:layout_below="@+id/petFriendly"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/emergency"
+                    android:id="@+id/tvEmergency"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical|center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:typeface="sans"
+                    android:layout_alignBottom="@+id/emergency"
+                    android:layout_alignTop="@+id/emergency"
+                    android:layout_alignStart="@+id/emergency"
+                    android:layout_alignEnd="@+id/emergency"
+                    android:layout_centerInParent="true" />
+        </RelativeLayout>
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingBottom="0dp"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banner_home_footer"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

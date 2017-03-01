@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        applicationId "com.mocatto"
+        minSdkVersion 21
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        aaptOptions {
+            additionalParameters "--no-version-vectors"
+        }
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+    compileOptions {
+    }
+    dexOptions {
+        incremental true
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.facebook.android:facebook-android-sdk:+'
+    compile 'com.github.npanigrahy:Custom-Calendar-View:v1.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.github.ugurtekbas:dialTimePicker:818ca0a698'
+    compile 'com.google.android.gms:play-services-ads:9.0.+'
+    compile 'com.google.code.gson:gson:2.2.2'
+    compile 'com.google.android.gms:play-services:9.0.+'
+    compile 'com.google.android.gms:play-services-auth:9.0.+'
+    compile 'com.google.android.gms:play-services-gcm:9.0.+'
+    compile 'com.p_v:flexiblecalendar:1.2.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+}

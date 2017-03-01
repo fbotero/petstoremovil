@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+tools:context="com.mocatto.fragments.MocattoValuesFragment"
+android:background="@color/colorPrimary">
+
+<ScrollView
+    android:id="@+id/scrollViewAppConf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack">
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/valores_de_mocatto_pets"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="38dp"
+            android:textColor="@android:color/white"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:id="@+id/titleAppConf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text1"
+            android:id="@+id/text1AppConf"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:layout_below="@+id/titleAppConf"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text2"
+            android:id="@+id/politicaText1AppConf"
+            android:layout_marginTop="20dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/text1AppConf"
+            android:layout_alignStart="@+id/titleAppConf"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text3"
+            android:id="@+id/politicaText2AppConf"
+            android:layout_marginTop="5dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/politicaText1AppConf"
+            android:layout_alignStart="@+id/titleAppConf" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text4"
+            android:id="@+id/politicaText3AppConf"
+            android:layout_marginTop="20dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/politicaText2AppConf"
+            android:layout_alignStart="@+id/titleAppConf"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text5"
+            android:id="@+id/politicaText4AppConf"
+            android:layout_marginTop="5dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/politicaText3AppConf"
+            android:layout_alignStart="@+id/titleAppConf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text6"
+            android:id="@+id/politicaText5AppConf"
+            android:layout_marginTop="20dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/politicaText4AppConf"
+            android:layout_alignStart="@+id/titleAppConf"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text8"
+            android:id="@+id/politicaText6AppConf"
+            android:layout_marginTop="5dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/politicaText5AppConf"
+            android:layout_alignStart="@+id/titleAppConf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text9"
+            android:id="@+id/politicaText7AppConf"
+            android:layout_marginTop="20dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/politicaText6AppConf"
+            android:layout_alignStart="@+id/titleAppConf"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mocatto_values_text10"
+            android:id="@+id/politicaText8AppConf"
+            android:layout_marginTop="5dp"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/politicaText7AppConf"
+            android:layout_alignStart="@+id/titleAppConf" />
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>
+

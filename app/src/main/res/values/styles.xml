@@ -1,0 +1,131 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorOrange</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:textColor">@drawable/selector_color_spinner</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">60dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="edittext_style">
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">60dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="edittext_style_gray">
+        <item name="android:background">@drawable/edittext_bg_gray</item>
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">60dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="edit_text_calendar_menu_style">
+        <item name="android:background">@drawable/edit_text_calendar_menu</item>
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">60dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="textview_style">
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">60dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="textview_style_next">
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="dialog_style">
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="progress_bar_style">
+        <item name="android:indeterminateTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="textview_style_comment">
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="edittext_style_comment">
+        <item name="android:background">@drawable/edittext_bg_comment</item>
+        <item name="android:textColor">@color/abc_secondary_text_material_light</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+</resources>

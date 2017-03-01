@@ -1,0 +1,450 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.PetHealthFragment"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="466dp"
+        android:background="@color/colorWhite"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="241dp"
+                    android:layout_height="145dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_selec_foto"
+                    android:id="@+id/ivImagen"
+                    android:layout_margin="5dp" />
+
+                <com.imanoweb.calendarview.CustomCalendarView
+                    android:id="@+id/calendar_view_ult_vacuna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:calendarBackgroundColor="@color/white"
+                    app:calendarTitleTextColor="@color/black"
+                    app:currentDayOfMonthColor="@color/current_day_of_month"
+                    app:dayOfMonthTextColor="@color/black"
+                    app:dayOfWeekTextColor="@color/black"
+                    app:disabledDayBackgroundColor="@color/day_disabled_background_color"
+                    app:disabledDayTextColor="@color/day_disabled_text_color"
+                    app:selectedDayBackgroundColor="@color/day_disabled_text_color"
+                    app:titleLayoutBackgroundColor="@color/white"
+                    app:weekLayoutBackgroundColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_gravity="top|center">
+                </com.imanoweb.calendarview.CustomCalendarView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/lastVaccine"
+                    style="@style/textview_style"
+                    android:id="@+id/lbFechaUltimaVacuna"
+                    android:textAlignment="gravity"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtFechaUltimasVacunas"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:layout_alignParentLeft="true"
+                    style="@style/edit_text_calendar_menu_style"
+                    android:inputType="none"
+                    android:nextFocusRight="@+id/spVacunas"
+                    android:nextFocusForward="@+id/spVacunas"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/vaccine"
+                    android:id="@+id/lbVacunas"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spVacunas"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/spTosPerrera"
+                    android:nextFocusForward="@+id/spTosPerrera"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/vacuna_tos_de_perrera"
+                    android:id="@+id/lbTosPerrera"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spTosPerrera"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/txtFechaUltTosPerrera"
+                    android:nextFocusForward="@+id/txtFechaUltTosPerrera"
+                    />
+
+                <com.imanoweb.calendarview.CustomCalendarView
+                    android:id="@+id/calendar_view_tos_perrera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:calendarBackgroundColor="@color/white"
+                    app:calendarTitleTextColor="@color/black"
+                    app:currentDayOfMonthColor="@color/current_day_of_month"
+                    app:dayOfMonthTextColor="@color/black"
+                    app:dayOfWeekTextColor="@color/black"
+                    app:disabledDayBackgroundColor="@color/day_disabled_background_color"
+                    app:disabledDayTextColor="@color/day_disabled_text_color"
+                    app:selectedDayBackgroundColor="@color/day_disabled_text_color"
+                    app:titleLayoutBackgroundColor="@color/white"
+                    app:weekLayoutBackgroundColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_gravity="top|center">
+                </com.imanoweb.calendarview.CustomCalendarView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/fecha_vacuna_tos_de_perrera"
+                    android:id="@+id/lbFechaUltTosPerrera"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtFechaUltTosPerrera"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:layout_alignParentLeft="true"
+                    style="@style/edit_text_calendar_menu_style"
+                    android:inputType="none"
+                    android:visibility="gone"
+                    android:nextFocusRight="@+id/spLeucemiaSida"
+                    android:nextFocusForward="@+id/spLeucemiaSida"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/vacuna_leucemia_y_sida_felino"
+                    android:id="@+id/lbLeucemiaSida"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spLeucemiaSida"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/spinner_style"
+                    android:nextFocusRight="@+id/txtUltVacunaLeucemiaSida"
+                    android:nextFocusForward="@+id/txtUltVacunaLeucemiaSida"
+                    />
+
+                <com.imanoweb.calendarview.CustomCalendarView
+                    android:id="@+id/calendar_view_vacuna_sida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:calendarBackgroundColor="@color/white"
+                    app:calendarTitleTextColor="@color/black"
+                    app:currentDayOfMonthColor="@color/current_day_of_month"
+                    app:dayOfMonthTextColor="@color/black"
+                    app:dayOfWeekTextColor="@color/black"
+                    app:disabledDayBackgroundColor="@color/day_disabled_background_color"
+                    app:disabledDayTextColor="@color/day_disabled_text_color"
+                    app:selectedDayBackgroundColor="@color/day_disabled_text_color"
+                    app:titleLayoutBackgroundColor="@color/white"
+                    app:weekLayoutBackgroundColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_gravity="top|center">
+                </com.imanoweb.calendarview.CustomCalendarView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/fecha_vacuna_leucemia_y_sida"
+                    android:id="@+id/lbUltVacunaLeucemiaSida"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtUltVacunaLeucemiaSida"
+                    android:editable="false"
+                    android:focusable="false"
+                    style="@style/edit_text_calendar_menu_style"
+                    android:layout_alignParentLeft="true"
+                    android:nextFocusRight="@+id/txtFechaUltDesparacitada"
+                    android:nextFocusForward="@+id/txtFechaUltDesparacitada"/>
+
+                <com.imanoweb.calendarview.CustomCalendarView
+                    android:id="@+id/calendar_view_desparacitada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:calendarBackgroundColor="@color/white"
+                    app:calendarTitleTextColor="@color/black"
+                    app:currentDayOfMonthColor="@color/current_day_of_month"
+                    app:dayOfMonthTextColor="@color/black"
+                    app:dayOfWeekTextColor="@color/black"
+                    app:disabledDayBackgroundColor="@color/day_disabled_background_color"
+                    app:disabledDayTextColor="@color/day_disabled_text_color"
+                    app:selectedDayBackgroundColor="@color/day_disabled_text_color"
+                    app:titleLayoutBackgroundColor="@color/white"
+                    app:weekLayoutBackgroundColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_gravity="top|center">
+                </com.imanoweb.calendarview.CustomCalendarView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/fecha_ultima_desparacitada"
+                    android:id="@+id/lbUltimaDesparacitada"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:ems="10"
+                    style="@style/edit_text_calendar_menu_style"
+                    android:focusable="false"
+                    android:id="@+id/txtFechaUltDesparacitada"
+                    android:nextFocusRight="@+id/spUsaAntipulgas"
+                    android:nextFocusForward="@+id/spUsaAntipulgas"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/antiFlea"
+                    android:id="@+id/lbUsoAntipulgas"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spUsaAntipulgas"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:nextFocusRight="@+id/txtUltimaVisitaVeterinario"
+                    android:nextFocusForward="@+id/txtUltimaVisitaVeterinario"
+                    style="@style/spinner_style"
+                    />
+
+                <com.imanoweb.calendarview.CustomCalendarView
+                    android:id="@+id/calendar_view_ult_visita_veterinario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:calendarBackgroundColor="@color/white"
+                    app:calendarTitleTextColor="@color/black"
+                    app:currentDayOfMonthColor="@color/current_day_of_month"
+                    app:dayOfMonthTextColor="@color/black"
+                    app:dayOfWeekTextColor="@color/black"
+                    app:disabledDayBackgroundColor="@color/day_disabled_background_color"
+                    app:disabledDayTextColor="@color/day_disabled_text_color"
+                    app:selectedDayBackgroundColor="@color/day_disabled_text_color"
+                    app:titleLayoutBackgroundColor="@color/white"
+                    app:weekLayoutBackgroundColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_gravity="top|center">
+                </com.imanoweb.calendarview.CustomCalendarView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/fecha_ultima_visita_al_veterinario"
+                    android:id="@+id/lbUltimaVisitaVeterinario"
+                    android:textAlignment="gravity"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    style="@style/edittext_style"
+                    android:id="@+id/txtUltimaVisitaVeterinario"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:drawableRight="@drawable/ic_calendario"
+                    android:nextFocusRight="@+id/spEstaEsterilizada"
+                    android:nextFocusForward="@+id/spEstaEsterilizada"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/sterilized"
+                    android:id="@+id/lbEstaEsterilizada"
+                    style="@style/textview_style"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spEstaEsterilizada"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    style="@style/spinner_style"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout_espacio_horiz"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="end"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nextRegister3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/siguiente"
+                        style="@style/textview_style_next" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_espacio_horiz1"
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next"
+                        android:id="@+id/ivNext1"
+                        android:layout_toRightOf="@id/nextRegister3"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_espacio_next1"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next11"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next1111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+            <LinearLayout
+                android:id="@+id/layout_espacio_next11111"
+                android:layout_width="match_parent"
+                android:layout_height="10sp"
+                android:orientation="vertical"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:baselineAligned="true"
+        android:gravity="bottom|center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:id="@+id/linearLayout">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer"/>
+    </LinearLayout>
+
+</RelativeLayout>
